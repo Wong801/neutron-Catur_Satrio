@@ -1,0 +1,16 @@
+import Vue from "vue";
+import Highcharts from "highcharts";
+import HighchartsVue from "highcharts-vue";
+import stockInit from "highcharts/modules/stock";
+
+if (typeof Highcharts === "object") {
+  stockInit(Highcharts);
+}
+
+Highcharts.setOptions({
+  time: {
+    timezone: 'Asia/Jakarta'
+  }
+})
+
+Vue.use(HighchartsVue);
