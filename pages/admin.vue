@@ -1,7 +1,7 @@
 <template>
   <div v-if="userData" class="lg:grid grid-cols-2 bg-green-100 bg-opacity-40 gap-8 px-10 py-8">
     <div class="flex gap-x-10">
-      <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" alt="" class="rounded-full">
+      <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" alt="" class="rounded-full w-1/2 h-1/2 lg:w-auto lg:h-auto">
       <div class="py-10">
         <h1 class="font-bold text-2xl">Welcome, {{ userData.username }}</h1>
         <button class="underline" @click="logout()">Logout</button>
