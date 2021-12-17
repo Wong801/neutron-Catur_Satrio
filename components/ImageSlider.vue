@@ -8,8 +8,8 @@
         </div>
       </div>
     </transition-group>
-    <a class="absolute left-0 top-0 h-[15rem] lg:h-[40rem] flex items-center px-6 text-white text-xl" @click="prev" href="#">&#10094;</a>
-    <a class="absolute right-0 top-0 h-[15rem] lg:h-[40rem] flex items-center px-6 text-white text-xl" @click="next" href="#">&#10095;</a>
+    <a class="absolute left-0 top-0 h-[15rem] lg:h-[40rem] flex items-center px-6 text-white text-xl" href="#" @click="prev" >&#10094;</a>
+    <a class="absolute right-0 top-0 h-[15rem] lg:h-[40rem] flex items-center px-6 text-white text-xl" href="#" @click="next" >&#10095;</a>
   </div>
 </template>
 
@@ -21,6 +21,15 @@ export default {
       timer: null,
       currentIndex: 0
     };
+  },
+
+  computed: {
+    items() {
+      return this.$store.state.api.content.banners
+    },
+    currentItem() {
+      return this.items[Math.abs(this.currentIndex) % this.items.length];
+    }
   },
 
   mounted() {
@@ -39,15 +48,6 @@ export default {
       this.currentIndex -= 1;
     }
   },
-
-  computed: {
-    items() {
-      return this.$store.state.api.content.banners
-    },
-    currentItem() {
-      return this.items[Math.abs(this.currentIndex) % this.items.length];
-    }
-  }
 };
 </script>
 

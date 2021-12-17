@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="border rounded-b-xl px-8 pb-6">
-      <ul class="my-6 leading-loose" v-for="(item, index) in product.desc" :key="index">
+      <ul v-for="(item, index) in product.desc" :key="index" class="my-6 leading-loose">
         <li>{{ item }}</li>
       </ul>
       <button class="bg-green-400 text-white text-center w-full rounded-full py-1 font-bold">
