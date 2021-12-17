@@ -42,6 +42,12 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // https://github.com/microcipcip/cookie-universal/tree/master/packages/cookie-universal-nuxt
+    'cookie-universal-nuxt',
+    ["vue-toastification/nuxt", {
+      draggable: false
+    }],
+    '@nuxtjs/dotenv',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
